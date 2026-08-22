@@ -1,0 +1,19 @@
+# Sample server inventory for documentation/testing only
+# Format: name,username,ip,password
+# These are only for vuewing purpose so you will get the idea about your format 
+
+WEB-NODE-A,ubuntu,192.0.2.101,DemoPass001
+WEB-NODE-B,ubuntu,192.0.2.117,DemoPass002
+APP-SRV-01,admin,198.51.100.42,DemoPass003
+APP-SRV-02,admin,198.51.100.76,DemoPass004
+DB-PRIMARY,dbadmin,198.51.100.143,DemoPass005
+DB-REPLICA,dbadmin,203.0.113.58,DemoPass006
+CACHE-NODE,ubuntu,203.0.113.91,DemoPass007
+API-GATEWAY,ubuntu,192.0.2.184,DemoPass008
+MONITORING,ubuntu,198.51.100.201,DemoPass009
+BACKUP-NODE,backup,203.0.113.126,DemoPass010
+CI-RUNNER,ubuntu,192.0.2.219,DemoPass011
+STORAGE-NODE,storage,198.51.100.167,DemoPass012
+LOG-SERVER,ubuntu,203.0.113.73,DemoPass013
+PROXY-NODE,ubuntu,192.0.2.156,DemoPass014
+MGMT-NODE,admin,203.0.113.198,DemoPass015
