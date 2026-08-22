@@ -1,0 +1,76 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NOTE:-
+This is a sample log demonstrating the type of output that will be generated when the script is executed. 
+The actual log will follow the same structure and format.
+
+You may notice that metrics such as RAM, Load, Disk, and Temperature display values along with status indicators such as good, 
+warn, high, or HOT. However, some servers may display N/A for these metrics.
+
+This occurs when the command used to collect the additional system information — landscape-sysinfo — is not available on that particular server. 
+In such cases, the script cannot retrieve those optional metrics and therefore records them as N/A.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+======================================== 
+Audit Run: 22-08-2026 10:30:15
+========================================
+
+[SERVER - WEB-NODE-A ]: 192.0.2.101
+    └─ [ UPTIME: OK ] : 10:30:15 up 94 days, 08:42, 2 users, load average: 1.42, 1.18, 1.07
+    └─ [ DISK: 38%(good) ] [ RAM: 54%(good) ] [ LOAD: 1.42(good) ] [ TEMP: 39(good) ]
+
+[SERVER - WEB-NODE-B ]: 192.0.2.117
+    └─ [ UPTIME: OK ] : 10:30:17 up 143 days, 11:26, 1 user, load average: 2.31, 2.08, 1.95
+    └─ [ DISK: 62%(good) ] [ RAM: 67%(good) ] [ LOAD: 2.31(good) ] [ TEMP: 44(good) ]
+
+[SERVER - APP-SRV-01 ]: 198.51.100.42
+    └─ [ UPTIME: OK ] : 10:30:20 up 61 days, 04:19, 3 users, load average: 5.72, 5.21, 4.98
+    └─ [ DISK: 74%(good) ] [ RAM: 78%(good) ] [ LOAD: 5.72(high) ] [ TEMP: 48(good) ]
+
+[SERVER - APP-SRV-02 ]: 198.51.100.76
+    └─ [ UPTIME: OK ] : 10:30:23 up 87 days, 19:03, 2 users, load average: 3.64, 3.22, 3.08
+    └─ [ DISK: 81%(warn) ] [ RAM: 61%(good) ] [ LOAD: 3.64(good) ] [ TEMP: 43(good) ]
+
+[SERVER - DB-PRIMARY ]: 198.51.100.143
+    └─ [ UPTIME: OK ] : 10:30:26 up 201 days, 07:51, 4 users, load average: 7.82, 7.45, 6.91
+    └─ [ DISK: 68%(good) ] [ RAM: 86%(warn) ] [ LOAD: 7.82(high) ] [ TEMP: 53(good) ]
+
+[SERVER - DB-REPLICA ]: 203.0.113.58
+    └─ [ UPTIME: OK ] : 10:30:29 up 198 days, 13:14, 2 users, load average: 4.11, 4.36, 4.02
+    └─ [ DISK: 57%(good) ] [ RAM: 72%(good) ] [ LOAD: 4.11(good) ] [ TEMP: 47(good) ]
+
+[SERVER - CACHE-NODE ]: 203.0.113.91
+    └─ [ UPTIME: ALERT ] : 10:30:32 up 18:47, 1 user, load average: 12.61, 11.84, 10.92
+    └─ [ DISK: 29%(good) ] [ RAM: 64%(good) ] [ LOAD: 12.61(high) ] [ TEMP: 61(HOT) ]
+
+[SERVER - API-GATEWAY ]: 192.0.2.184
+    └─ [ UPTIME: OK ] : 10:30:35 up 116 days, 02:28, 2 users, load average: 2.84, 2.61, 2.49
+    └─ [ DISK: 46%(good) ] [ RAM: 58%(good) ] [ LOAD: 2.84(good) ] [ TEMP: 41(good) ]
+
+[SERVER - MONITORING ]: 198.51.100.201
+    └─ [ UPTIME: OK ] : 10:30:38 up 173 days, 18:06, 1 user, load average: 1.12, 1.09, 0.97
+    └─ [ DISK: %(N/A) ] [ RAM: %(N/A) ] [ LOAD: (N/A) ] [ TEMP: VM(no-sensor) ]
+
+[SERVER - BACKUP-NODE ]: 203.0.113.126
+    └─ [ UPTIME: OK ] : 10:30:41 up 132 days, 09:33, 2 users, load average: 2.27, 2.04, 1.88
+    └─ [ DISK: 79%(good) ] [ RAM: 69%(good) ] [ LOAD: 2.27(good) ] [ TEMP: 45(good) ]
+
+[SERVER - CI-RUNNER ]: 192.0.2.219
+    └─ [ UPTIME: OK ] : 10:30:44 up 47 days, 16:22, 5 users, load average: 4.87, 4.31, 3.96
+    └─ [ DISK: 63%(good) ] [ RAM: 74%(good) ] [ LOAD: 4.87(good) ] [ TEMP: 42(good) ]
+
+[SERVER - STORAGE-NODE ]: 198.51.100.167
+    └─ [ UPTIME: OK ] : 10:30:47 up 229 days, 03:15, 2 users, load average: 6.42, 5.87, 5.44
+    └─ [ DISK: 88%(warn) ] [ RAM: 81%(warn) ] [ LOAD: 6.42(high) ] [ TEMP: 50(good) ]
+
+[SERVER - LOG-SERVER ]: 203.0.113.73
+    └─ [ UPTIME: OK ] : 10:30:50 up 154 days, 21:40, 1 user, load average: 1.76, 1.54, 1.43
+    └─ [ DISK: 72%(good) ] [ RAM: 63%(good) ] [ LOAD: 1.76(good) ] [ TEMP: VM(no-sensor) ]
+
+[SERVER - PROXY-NODE ]: 192.0.2.156
+    └─ [ UPTIME: OK ] : 10:30:53 up 109 days, 05:27, 2 users, load average: 3.26, 3.11, 2.94
+    └─ [ DISK: 41%(good) ] [ RAM: 57%(good) ] [ LOAD: 3.26(good) ] [ TEMP: 40(good) ]
+
+[SERVER - MGMT-NODE ]: 203.0.113.198
+    └─ [ UPTIME: OK ] : 10:30:56 up 184 days, 12:09, 1 user, load average: 0.74, 0.82, 0.69
+    └─ [ DISK: %(N/A) ] [ RAM: %(N/A) ] [ LOAD: (N/A) ] [ TEMP: VM(no-sensor) ]
