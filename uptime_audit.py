@@ -19,7 +19,7 @@ from pathlib import Path
 import paramiko
 
 
-SERVER_FILE = Path("vincentio_servers.txt")
+SERVER_FILE = Path("servers.txt")
 LOG_FILE = Path("server_uptimes.log")
 
 SSH_TIMEOUT = 3.0
