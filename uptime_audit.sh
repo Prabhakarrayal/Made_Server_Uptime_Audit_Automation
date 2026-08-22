@@ -5,7 +5,7 @@
 # ==============================================================================
 
 # 1. VARIABLES
-SERVER_FILE="vincentio_servers.txt"
+SERVER_FILE="servers.txt"
 LOG_FILE="server_uptimes.log"
 
 if [[ ! -f "$SERVER_FILE" ]]; then
