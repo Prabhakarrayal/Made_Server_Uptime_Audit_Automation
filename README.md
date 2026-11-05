@@ -182,7 +182,7 @@ For production use, SSH keys or a proper secrets-management solution are prefera
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 Before running the automation, confirm the following with the system administrator/senior responsible for the servers.
 
@@ -703,7 +703,7 @@ with placeholder credentials.
 
 ---
 
-## Running the Bash Version
+## Running the Bash Version >>>> [Click here for the Bash File](https://github.com/Prabhakarrayal/Made_Server_Uptime_Audit_Automation/blob/main/uptime_audit.sh)
 
 From the project directory:
 
@@ -733,7 +733,7 @@ when executed from `/opt/uptime`.
 
 ---
 
-## Running the Python Version
+## Running the Python Version >>>> [Click here for the Python File](https://github.com/Prabhakarrayal/Made_Server_Uptime_Audit_Automation/blob/main/uptime_audit.py)
 
 Install Paramiko:
 
