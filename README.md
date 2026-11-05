@@ -1,6 +1,6 @@
 # Made Server Uptime Audit Automation 
 
-## 📌 Project Overview 
+## Project Overview 
 
 This project automates the daily server uptime audit that was originally being performed manually through SSH.
 
@@ -12,7 +12,7 @@ The automation is intentionally **read-only on the remote servers**. It does not
 
 ---
 
-# 📖 The Story Behind the Project
+## The Story Behind the Project
 
 When I joined the team, one of my regular operational tasks was to check the uptime of the assigned servers every day.
 
@@ -59,7 +59,7 @@ That led to this project.
 
 ---
 
-# 🎯 Goals
+## Goals
 
 The automation was designed with the following goals:
 
@@ -74,7 +74,7 @@ The automation was designed with the following goals:
 
 ---
 
-# 🏗️ Architecture
+## Architecture
 
 ```text
                     Central Ubuntu Machine
@@ -113,7 +113,7 @@ The script does **not** SSH from Server 1 into Server 2.
 
 ---
 
-# 🔐 Remote Server Safety
+## Remote Server Safety
 
 The remote collection is intentionally read-only.
 
@@ -155,7 +155,7 @@ server_uptimes.log
 
 ---
 
-# 📋 Server Inventory Format
+## Server Inventory Format
 
 The server inventory is stored in:
 
@@ -182,7 +182,7 @@ For production use, SSH keys or a proper secrets-management solution are prefera
 
 ---
 
-# ⚙️ Prerequisites
+## ⚙️ Prerequisites
 
 Before running the automation, confirm the following with the system administrator/senior responsible for the servers.
 
@@ -244,7 +244,7 @@ If `landscape-sysinfo` is not installed, confirm with the senior whether the sta
 
 ---
 
-# 🧩 Why `landscape-sysinfo`?
+## Why `landscape-sysinfo`?
 
 `landscape-sysinfo` is associated with Canonical's Landscape management tooling and is commonly found in Ubuntu environments that use Landscape.
 
@@ -278,7 +278,7 @@ That is why the Python implementation includes a fallback approach.
 
 ---
 
-# 🔄 Landscape Alternative
+## Landscape Alternative
 
 There is no single universal Linux command that exactly replaces `landscape-sysinfo`.
 
@@ -308,7 +308,7 @@ Temperature is treated as optional because hardware temperature sensors are not 
 
 ---
 
-# 🧠 Parsing Challenge
+## Parsing Challenge
 
 One of the most useful lessons from this project was that **parsing command output by fixed field numbers is fragile**.
 
@@ -380,7 +380,7 @@ integer expression expected
 
 ---
 
-# ✅ Better Parsing Strategy
+## Better Parsing Strategy
 
 The improved parser does not depend unnecessarily on absolute field positions.
 
@@ -440,7 +440,7 @@ This approach is more resilient to spacing changes and additional fields.
 
 ---
 
-# 🧪 Why This Matters
+## Why This Matters
 
 Command output is designed primarily for humans, not as a stable API.
 
@@ -462,7 +462,7 @@ A parser based on recognizable labels is generally safer.
 
 ---
 
-# 🖥️ Servers Without Landscape
+## Servers Without Landscape
 
 Some servers in the environment do not provide the same Landscape information.
 
@@ -490,7 +490,7 @@ This is important because:
 
 ---
 
-# 📊 Log Format
+## Log Format
 
 The output is intentionally human-readable because the primary requirement is a daily operational record.
 
@@ -520,7 +520,7 @@ Therefore:
 
 ---
 
-# 🚦 Threshold Logic
+## Threshold Logic
 
 The current basic thresholds are intentionally simple.
 
@@ -575,7 +575,7 @@ The thresholds are operational conventions for this audit and should be adjusted
 
 ---
 
-# 🛠️ Challenges Faced
+## Challenges Faced
 
 ## Challenge 1 — Manual repetition
 
@@ -661,7 +661,7 @@ All parsing and log writing happen on the central machine.
 
 ---
 
-# 🔐 Security Considerations
+## Security Considerations
 
 The current implementation supports password-based SSH because that matches the original operational environment.
 
@@ -703,7 +703,7 @@ with placeholder credentials.
 
 ---
 
-# 🚀 Running the Bash Version
+## Running the Bash Version
 
 From the project directory:
 
@@ -733,7 +733,7 @@ when executed from `/opt/uptime`.
 
 ---
 
-# 🐍 Running the Python Version
+## Running the Python Version
 
 Install Paramiko:
 
@@ -751,7 +751,7 @@ The Python implementation follows the same operational workflow as the Bash vers
 
 ---
 
-# 🆚 Bash vs Python
+## Bash vs Python
 
 Both implementations can accomplish the same task.
 
@@ -778,7 +778,7 @@ For this project, Bash is a natural fit because the original task itself is a Li
 
 ---
 
-# 🔄 Current Workflow
+## Current Workflow
 
 ```text
 1. Read server inventory
@@ -796,7 +796,7 @@ For this project, Bash is a natural fit because the original task itself is a Li
 
 ---
 
-# 📁 Suggested Repository Structure
+## Suggested Repository Structure
 
 ```text
 server-uptime-audit/
@@ -822,7 +822,7 @@ should remain outside a public repository when they contain production credentia
 
 ---
 
-# 🔮 Future Improvements
+## Future Improvements
 
 The project is intentionally kept simple because the original requirement is a daily uptime audit.
 
@@ -843,7 +843,7 @@ These are future possibilities, not requirements of the current implementation.
 
 ---
 
-# 📌 Key Takeaways
+## Key Takeaways
 
 This project taught me several practical infrastructure concepts:
 
@@ -860,7 +860,7 @@ This project taught me several practical infrastructure concepts:
 
 ---
 
-# 👨‍💻 Project Motivation
+## Project Motivation
 
 This project started from a very practical problem rather than being created as a theoretical exercise.
 
@@ -876,7 +876,15 @@ The difference is that the repetitive work is now performed consistently by the 
 
 ---
 
-# ⚠️ Disclaimer
+## CLICK HERE TO >>>> [AUTOMATE IT MORE FURTHER USING CRON IN FEW EASY STEPS](https://github.com/Prabhakarrayal/Made_Server_Uptime_Audit_Automation/blob/main/Cron_Implementation_In_Uptime_Automation.md)
+
+ 
+- Cron allows us to schedule commands and scripts to execute automatically at predefined times or intervals so that the scripts or files can be executed on perticular intervals and we don't have to run them daily. Cron will execute them on behalf of us and will store it in its logs
+
+
+---
+
+## Disclaimer
 
 This project is intended as an internal/educational automation pattern.
 And the server Credentals used in this project here are only for understanding practice. 
@@ -888,7 +896,7 @@ Before deploying it against production infrastructure:
 - Do not install additional packages on production servers without approval.
 - Test the automation on an approved server before wider deployment.
 
-## 👤 Author & Maintainer
+## Author & Maintainer
 
 **Prabhakar Rayal**
 
